@@ -1,0 +1,86 @@
+.highlight {
+  color: blue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+nav button {
+  margin: 0 10px;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+nav button:hover {
+  transform: translateY(-2px);
+  background: #fff;
+  color: #333;
+}
+
+.title {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+#content {
+  padding: 2rem;
+}
+
+#grid {
+  display: grid;
+  width: 100%;
+  place-items: center start;
+  padding: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto; /* or specify row sizes */
+  grid-gap: 10px; /* Adjust gap between items */
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+nav h1 {
+  text-align: center;
+  padding: 1rem;
+  color: black;
+  padding: 1rem;
+}
+
+.landing-image {
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  #grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  #grid p {
+    font-size: 1rem;
+  }
+
+  .landing-image {
+    max-width: 100%; /* This ensures the image doesn't exceed the width of its container */
+    height: auto; /* This maintains the aspect ratio of the image */
+    display: block; /* Removes extra space below the image due to its inline nature */
+  }
+}
