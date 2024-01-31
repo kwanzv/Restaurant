@@ -2,6 +2,7 @@ import "./styles.css";
 import { SimpleVirtualDOM } from "./DOM.js";
 import { aboutElement } from "./about.js";
 import { homeElement } from "./home.js";
+import { menuElement } from "./menu.js";
 const content = document.querySelector("#content");
 
 function tabbedContent() {
@@ -23,5 +24,7 @@ function tabbedContent() {
     });
   });
 }
+
+content.appendChild(homeElement.render());
 
 tabbedContent();
